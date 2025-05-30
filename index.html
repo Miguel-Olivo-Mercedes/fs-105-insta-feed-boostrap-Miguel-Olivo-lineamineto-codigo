@@ -11,17 +11,18 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Fontawesome link (For the icons) -->
     <script src="https://kit.fontawesome.com/072e5df971.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
     <style>
-        .nav-pill .nav-link{
+        .nav-pill .nav-link {
             color: grey;
         }
-        .nav-pill .nav-link.active{
+
+        .nav-pill .nav-link.active {
             color: blue;
         }
     </style>
+</head>
+
+<body>
     <!-- Navbar -->
     <nav class="navbar navbar-light bg-light py-3">
         <div class="container-fluid">
@@ -43,7 +44,7 @@
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                            <li><a class="dropdown-item" href="#">Accessibility</a></li>
                             <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -85,22 +86,28 @@
         </div>
     </div>
 
-    <!-- Toggle Grid -->
+             <!-- Toggle Grid -->
     <div class="container-fluid p-2">
         <ul class="nav nav-pill justify-content-center" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
-                    role="tab" aria-controls="home" aria-selected="true"><i
-                        class="fa-solid fa-table-cells"></i></a>
+
+            <!-- CAMBIO: Se añadió id="grid-tab", data-bs-target="#grid" y aria-controls="grid" -->
+                <a class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid" type="button"
+                    role="tab" aria-controls="grid" aria-selected="true"><i class="fa-solid fa-table-cells"></i></a>
             </li>
             <li class="nav-item" role="presentation">
-                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
-                    role="tab" aria-controls="profile" aria-selected="false"><i class="fa-solid fa-square"></i></a>
+            <!-- CAMBIO: Se añadió id="list-tab", data-bs-target="#list" y aria-controls="list" -->
+
+                <a class="nav-link" id="list-tab" data-bs-toggle="tab" data-bs-target="#list" type="button"
+                    role="tab" aria-controls="list" aria-selected="false"><i class="fa-solid fa-square"></i></a>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
+            <!-- CAMBIO: id="grid" y aria-labelledby="grid-tab" para que coincidan con el tab-link -->
+
+            
+            <div class="tab-pane fade show active overflow-hidden" id="grid" role="tabpanel" aria-labelledby="grid-tab">
             <!-- 3 photos per row grid -->
-            <div class="tab-pane fade show active overflow-hidden" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="row">
                     <div class="col-12 col-sm-6 col-lg-4 p-1"><img style="height: 50vw; object-fit: cover;" src="https://i.pinimg.com/474x/7f/e9/87/7fe9877cd63c26ff2750d152480f26d4.jpg" class="img-fluid w-100" alt=""></div>
                     <div class="col-12 col-sm-6 col-lg-4 p-1"><img style="height: 50vw; object-fit: cover;" src="https://i.pinimg.com/736x/45/53/19/455319799a74e63bc46198b5bbab5165.jpg" class="img-fluid w-100" alt=""></div>
@@ -117,8 +124,9 @@
                     <div class="col-12 col-sm-6 col-lg-4 p-1"><img style="height: 50vw; object-fit: cover;" src="https://i.pinimg.com/736x/ed/c6/bd/edc6bddfddb98468b95ef3a83849f167.jpg" class="img-fluid w-100" alt=""></div>
                 </div>
             </div>
-            <!-- 1 photo per row grid -->
-            <div class="tab-pane fade overflow-hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+            <!-- 1 photo per row list -->
+            <div class="tab-pane fade overflow-hidden" id="list" role="tabpanel" aria-labelledby="list-tab">
                 <div class="row my-4">
                     <div class="col-12 col-md-10 col-xl-8 mx-auto border rounded p-0">
                         <div class="d-flex p-2">
